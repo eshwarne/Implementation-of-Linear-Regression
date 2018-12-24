@@ -31,13 +31,9 @@ print(slope, " ",yIntercept)
 regression_line= [(slope*x)+yIntercept for x in xaxis]
 regression_line_array=np.array(regression_line,dtype=np.float)
 
-error=get_r_squared_error(regression_line,yaxis)
-print(error)
 #sample prediction
 x=6
 y=slope*x + yIntercept
-
-
 print(y)
 
 
@@ -47,6 +43,7 @@ plt.scatter(x,y,color='b')
 plt.title("REGRESSION LINE")
 plt.show()
 
-
 #calculate the accuracy - r squared error r=1-(regression_line_squared_error - squared error mean y)
+determinant_of_coeff=get_r_squared_error(regression_line,yaxis)
+print(f"Accuracy : {determinant_of_coeff*100} ")
 
