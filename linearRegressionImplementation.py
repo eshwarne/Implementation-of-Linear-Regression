@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt;
 from matplotlib import style
 from statistics import mean
-style.use('fivethirtyeight')
+style.use('ggplot')
 def best_fit_slope(xs,ys):
     slope=(mean(xs)*mean(ys))
     slope=slope-(mean(xs*ys))
